@@ -9,19 +9,28 @@ Removal of certain event logs within a Windows OS
 ```powershell
 PS C:> eventvwr
 ```
-2. Create a filter on the log you want to alter. In the below example, we are querying for any event ID 4625 that have triggered in the last 7 days.
+2. Create a filter on the log you want to alter. Note: In the below example, we are querying for all events, except event ID 4625, that have triggered in the last 7 days.
 ![Alt text](https://github.com/WiredPulse/Invoke-GhostLog/blob/master/Images/eventvwr.png?raw=true "Optional Title")
 
-Get a system Powershell window <br>
-2. Open your local Event Viewer in order to build an XML query to use
+3. Click the XML tab and copy the text circled in red.
+![Alt text](https://github.com/WiredPulse/Invoke-GhostLog/blob/master/Images/eventvwr2.png?raw=true "Optional Title")
+
+4. Paste the text from the above step in Notepad and make the below change. Note: If not doing the example, use the link at the bottom of the screen to alter the comparison operator accordingly.
 ```powershell
-PS C:> eventvwr
+# Current
+[System[TimeCreated[timediff(@SystemTime) &lt;= 604800000
+
+# What it needs to change to
+[System[TimeCreated[timediff(@SystemTime) <= 604800000
 ```
-3. 
+5. Get a System level Powershell window <br>
 
-Execute the script <br>
+6. Copy the changed data from step 4
+
+7. Run Invoke-GhostLog and use the changed data from step 4 as the filter
 ```powershell
-
+PS C:> . .\Invoke-GhostLog
+PS C:> Invoke-GhostLog -log Security -filter "[System[TimeCreated[timediff(@SystemTime) <= 604800000"
 ```
 
 # Building XML queries
