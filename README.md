@@ -27,7 +27,7 @@ PS C:> eventvwr
 
 6. Copy the changed data from step 4
 
-7. Run Invoke-GhostLog and use the changed data from step 4 as the filter
+7. Dot source and run Invoke-GhostLog, using the changed data from step 4 as the filter
 ```powershell
 PS C:> . .\Invoke-GhostLog
 PS C:> Invoke-GhostLog -log Security -filter "[System[TimeCreated[timediff(@SystemTime) <= 604800000"
