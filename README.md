@@ -1,3 +1,6 @@
+![Alt text](https://github.com/WiredPulse/Invoke-GhostLog/blob/master/Images/Header.png?raw=true "Optional Title")<br>
+<br>
+
 # Invoke-GhostLog
 Removal of certain event logs within a Windows OS
 
@@ -17,6 +20,4 @@ Execute the script <br>
 # Building XML queries
 https://blogs.technet.microsoft.com/heyscriptingguy/2014/06/06/understanding-xml-and-xpath/
 
-Running the script<br>
-![Alt text](https://github.com/WiredPulse/Invoke-GhostLog/blob/master/Images/Header.png?raw=true "Optional Title")<br>
-<br>
+
