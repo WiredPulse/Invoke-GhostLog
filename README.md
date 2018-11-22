@@ -1,8 +1,8 @@
-![Alt text](https://github.com/WiredPulse/Invoke-GhostLog/blob/master/Images/Header.png?raw=true "Optional Title")<br>
-<br>
-
 # Invoke-GhostLog
 Removal of certain event logs within a Windows OS
+
+![Alt text](https://github.com/WiredPulse/Invoke-GhostLog/blob/master/Images/Header.png?raw=true "Optional Title")<br>
+<br>
 
 # Usage <br>
 1. Open a PowerShell window and lauch Event Viewer and build an XML query to use. You may want to do this on another system instead of the target.
