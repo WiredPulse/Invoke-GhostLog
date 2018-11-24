@@ -32,6 +32,7 @@ PS C:> eventvwr
 PS C:> . .\Invoke-GhostLog
 PS C:> Invoke-GhostLog -log Security -filter "[System[TimeCreated[timediff(@SystemTime) <= 604800000"
 ```
+8. Check out the event logs and notice the specified logs are gone.
 
 # Building XML queries
 https://blogs.technet.microsoft.com/heyscriptingguy/2014/06/06/understanding-xml-and-xpath/
