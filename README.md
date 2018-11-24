@@ -5,7 +5,7 @@ Removal of certain event logs within a Windows OS
 <br>
 
 # Usage <br>
-1. Open a PowerShell window and launch Event Viewer and build an XML query to use. You may want to do this on another system instead of the target.
+1. Open a PowerShell window, launch Event Viewer, and build an XML query to use. You may want to do this on another system instead of the target.
 ```powershell
 PS C:> eventvwr
 ```
